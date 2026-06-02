@@ -7,28 +7,38 @@ env/
 venv/
 ENV/
 
-# YOLOv8 Weights & Models
+# YOLOv8 Weights & Models (대용량 모델 가중치 제외)
 *.pt
 weights/
 
-# Training Results & Logs
+# Training Results & Logs (학습 결과물 제외)
 runs/
+inference_outputs/
 
-# Dataset - Processed (Large files)
+# Dataset - Raw & Processed (데이터셋 제외)
 data/train/
 data/val/
 data/test/
+data/sample/
 data/sample_converted/
+data/test_images/
 *.cache
 
 # Jupyter Notebook
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
 
+# IDE Settings (개별 설정 파일 제외)
+.vscode/
+.idea/
+*.swp
+*.swo
+
 # OS specific
 .DS_Store
 Thumbs.db
 
-# Environments
+# Environments (환경 변수 및 보안 파일 제외)
 .env
 .flaskenv
+*.local

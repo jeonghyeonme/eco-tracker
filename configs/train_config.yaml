@@ -18,5 +18,21 @@ patience: 10                   # 성능 향상이 없을 때 조기 종료(Early
 # 4. Hardware & Logging (하드웨어 및 로그 설정)
 device: "auto"                 # 학습 장치 (auto: 자동 감지, 0: 첫 번째 GPU, cpu: CPU 강제 사용)
 project: "runs"                # 결과가 저장될 상위 디렉토리 이름
-name: "exp1"                   # 이번 실험의 이름 (runs/exp1 폴더에 결과 저장됨)
+name: "exp_augmented"          # 이번 실험의 이름
 verbose: true                  # 학습 과정을 상세히 출력할지 여부
+
+# 5. Data Augmentation Settings (데이터 증강 설정)
+# 데이터가 부족할 때 가상의 데이터를 생성하여 과적합을 방지하고 성능을 높입니다.
+hsv_h: 0.015                   # 이미지 색조(Hue) 변경 범위
+hsv_s: 0.7                     # 이미지 채도(Saturation) 변경 범위
+hsv_v: 0.4                     # 이미지 명도(Value) 변경 범위
+degrees: 10.0                  # 이미지 회전 범위 (degrees)
+translate: 0.1                 # 이미지 이동 범위 (fraction)
+scale: 0.5                     # 이미지 크기 조절 범위 (gain)
+shear: 2.0                     # 이미지 전단(Shear) 변형 범위 (degrees)
+perspective: 0.0               # 투영 변형 범위
+flipud: 0.0                    # 상하 반전 확률
+fliplr: 0.5                    # 좌우 반전 확률
+mosaic: 1.0                    # 4장의 이미지를 합쳐 한 장으로 만드는 Mosaic 증강 확률 (강력 권장)
+mixup: 0.1                     # 두 이미지를 섞는 Mixup 증강 확률
+copy_paste: 0.1                # 객체를 복사해서 다른 이미지에 붙이는 확률
