@@ -1,0 +1,22 @@
+# 🚀 YOLOv8 Training Configuration (Eco-Tracker)
+
+# 1. Model Settings (모델 설정)
+model_variant: "yolov8n"  # 모델 종류 결정 (yolov8n: 가장 빠름, yolov8s: 균형, yolov8m: 정확함/무거움)
+pretrained: true          # 사전 학습된 가중치를 사용하여 학습 시작 여부 (권장: true)
+
+# 2. Dataset Settings (데이터셋 설정)
+data_yaml: "data/dataset.yaml" # 클래스 이름과 데이터 경로가 정의된 yaml 파일 위치
+img_size: 640                  # 학습 시 이미지 입력 해상도 (일반적으로 640 사용)
+
+# 3. Training Hyperparameters (학습 하이퍼파라미터)
+epochs: 50                     # 전체 데이터셋을 몇 번 반복해서 학습할지 결정
+batch_size: 16                 # 한 번에 처리할 이미지 묶음 크기 (GPU 메모리에 따라 조절: 16, 32, 64)
+lr0: 0.01                      # 초기 학습률 (Learning Rate). 학습의 보폭을 결정
+optimizer: "auto"              # 최적화 알고리즘 (SGD, Adam, AdamW 등. auto는 모델이 자동 선택)
+patience: 10                   # 성능 향상이 없을 때 조기 종료(Early Stopping)를 위한 대기 epoch 수
+
+# 4. Hardware & Logging (하드웨어 및 로그 설정)
+device: "auto"                 # 학습 장치 (auto: 자동 감지, 0: 첫 번째 GPU, cpu: CPU 강제 사용)
+project: "runs"                # 결과가 저장될 상위 디렉토리 이름
+name: "exp1"                   # 이번 실험의 이름 (runs/exp1 폴더에 결과 저장됨)
+verbose: true                  # 학습 과정을 상세히 출력할지 여부

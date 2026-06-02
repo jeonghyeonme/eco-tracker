@@ -1,0 +1,9 @@
+torch
+ultralytics
+albumentations
+opencv-python
+pandas
+numpy
+tqdm
+matplotlib
+PyYAML

@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# YOLOv8 Weights & Models
+*.pt
+weights/
+
+# Training Results & Logs
+runs/
+
+# Dataset - Processed (Large files)
+data/train/
+data/val/
+data/test/
+data/sample_converted/
+*.cache
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Environments
+.env
+.flaskenv
