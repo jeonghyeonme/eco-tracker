@@ -1,0 +1,28 @@
+# 🚀 YOLOv8n (Nano) - Lite Version (No Heavy Augmentation)
+model_variant: "yolov8n"
+pretrained: true
+
+# Dataset
+data_yaml: "data/yolo_dataset/dataset.yaml"
+img_size: 640
+
+# Hyperparameters
+epochs: 10
+batch_size: 16
+lr0: 0.01
+optimizer: "auto"
+patience: 10
+
+# Logging
+project: "runs/detect"
+name: "yolov8n_lite_exp"
+device: "auto"
+verbose: true
+
+# 💡 New Condition: Turn off heavy augmentations to compare with the original
+mosaic: 0.0    # Disable Mosaic
+mixup: 0.0     # Disable Mixup
+fliplr: 0.5    # Keep basic flip
+hsv_h: 0.0     # Disable color jitter
+hsv_s: 0.0
+hsv_v: 0.0
