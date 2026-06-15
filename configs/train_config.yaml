@@ -5,7 +5,7 @@ model_variant: "yolov8n"  # 모델 종류 결정 (yolov8n: 가장 빠름, yolov8
 pretrained: true          # 사전 학습된 가중치를 사용하여 학습 시작 여부 (권장: true)
 
 # 2. Dataset Settings (데이터셋 설정)
-data_yaml: "data/dataset.yaml" # 클래스 이름과 데이터 경로가 정의된 yaml 파일 위치
+data_yaml: "data/yolo_dataset/dataset.yaml" # 클래스 이름과 데이터 경로가 정의된 yaml 파일 위치
 img_size: 640                  # 학습 시 이미지 입력 해상도 (일반적으로 640 사용)
 
 # 3. Training Hyperparameters (학습 하이퍼파라미터)
