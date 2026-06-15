@@ -15,14 +15,10 @@ weights/
 runs/
 inference_outputs/
 
-# Dataset - Raw & Processed (데이터셋 제외)
-data/train/
-data/val/
-data/test/
-data/sample/
-data/sample_converted/
-data/test_images/
+# Dataset - Raw & Processed (데이터셋 제외 - 대용량 데이터는 별도로 관리)
+data/
 *.cache
+*.zip
 
 # Jupyter Notebook
 .ipynb_checkpoints
