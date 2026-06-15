@@ -1,0 +1,25 @@
+# 🚀 YOLOv8m (Medium) - Accurate but Heavy
+model_variant: "yolov8m"
+pretrained: true
+
+# Dataset
+data_yaml: "data/yolo_dataset/dataset.yaml"
+img_size: 640
+
+# Hyperparameters (Optimized for stability)
+epochs: 10
+batch_size: 16
+lr0: 0.01
+optimizer: "auto"
+patience: 10
+
+# Logging
+project: "runs/detect"
+name: "yolov8m_exp"
+device: "auto"
+verbose: true
+
+# Augmentation
+mosaic: 1.0
+mixup: 0.1
+fliplr: 0.5
