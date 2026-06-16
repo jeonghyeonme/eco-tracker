@@ -1,0 +1,9 @@
+--------------------------------------------------
+Timestamp: 2026-06-16 14:29:10
+Model: best.pt
+Weights: results/yolov8m/yolov8m_exp-2/weights/best.pt
+  - mAP@0.5: 0.9664
+  - mAP@0.5:0.95: 0.9335
+  - Avg Inference Time: 230.76 ms
+  - Estimated FPS: 4.33
+--------------------------------------------------
