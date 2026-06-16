@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 env/
 venv/
+venv_312/
 ENV/
 
 # YOLOv8 Weights & Models (대용량 모델 가중치 제외)
