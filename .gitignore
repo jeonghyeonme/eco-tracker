@@ -8,7 +8,6 @@ venv/
 ENV/
 
 # YOLOv8 Weights & Models (대용량 모델 가중치 제외)
-*.pt
 weights/
 
 # Training Results & Logs (학습 결과물 제외)
